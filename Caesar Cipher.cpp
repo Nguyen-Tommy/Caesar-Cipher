@@ -33,7 +33,6 @@ void cipher(string word, int shifts) {
 	for (int i = 0; i < shifts; i++) {
 		word = shift(word);
 	}
-
 	cout << "Encryted secert code: " << word << endl;
 }
 
@@ -221,7 +220,7 @@ void decipher(string word) {
 
 	// Retrieve user input if guess was correct
 	int input;
-	cout << "Correct Guess?\n"
+	cout << "Correct guess?\n"
 		"1. Yes\n"
 		"2. No\n";
 	cin >> input;
