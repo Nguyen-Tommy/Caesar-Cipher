@@ -1,7 +1,7 @@
 // Caesar Cipher
 // Encrypt a secret code with caesar cipher
 // Decrypt a caesar cipher code through brute force
-// Guess result through frequency analysis
+// Guess through frequency analysis
 
 #include<iostream>
 #include<string>
