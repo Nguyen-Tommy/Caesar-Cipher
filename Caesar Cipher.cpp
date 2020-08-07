@@ -38,96 +38,95 @@ void cipher(string word, int shifts) {
 
 // Calculate percentages of letters for given string
 void calculatePercentages(double percentages[], string word) {
-	int total = 0, a = 0, b = 0, c = 0, d = 0, e = 0, f = 0, g = 0, h = 0,
-		i = 0, j = 0, k = 0, l = 0, m = 0, n = 0, o = 0, p = 0, q = 0, r = 0,
-		s = 0, t = 0, u = 0, v = 0, w = 0, x = 0, y = 0, z = 0;
+	int letters[26] = { 0 };
+	int total = 0;
 
 	// Iterate through the string
 	for (int count = 0; count < word.size(); count++) {
 
 		// Ignore non-alphabetical chars
-		if (isalpha(word[i])) {
+		if (isalpha(word[count])) {
 			word[count] = tolower(word[count]); // 
 
 			// Increment corresponding letters
 			switch (word[count]) {
 			case 'a':
-				a++;
+				letters[0]++;
 				break;
 			case 'b':
-				b++;
+				letters[1]++;
 				break;
 			case 'c':
-				c++;
+				letters[2]++;
 				break;
 			case 'd':
-				d++;
+				letters[3]++;
 				break;
 			case 'e':
-				e++;
+				letters[4]++;
 				break;
 			case 'f':
-				f++;
+				letters[5]++;
 				break;
 			case 'g':
-				g++;
+				letters[6]++;
 				break;
 			case 'h':
-				h++;
+				letters[7]++;
 				break;
 			case 'i':
-				i++;
+				letters[8]++;
 				break;
 			case 'j':
-				j++;
+				letters[9]++;
 				break;
 			case 'k':
-				k++;
+				letters[10]++;
 				break;
 			case 'l':
-				l++;
+				letters[11]++;
 				break;
 			case 'm':
-				m++;
+				letters[12]++;
 				break;
 			case 'n':
-				n++;
+				letters[13]++;
 				break;
 			case 'o':
-				o++;
+				letters[14]++;
 				break;
 			case 'p':
-				p++;
+				letters[15]++;
 				break;
 			case 'q':
-				q++;
+				letters[16]++;
 				break;
 			case 'r':
-				r++;
+				letters[17]++;
 				break;
 			case 's':
-				s++;
+				letters[18]++;
 				break;
 			case 't':
-				t++;
+				letters[19]++;
 				break;
 			case 'u':
-				u++;
+				letters[20]++;
 				break;
 			case 'v':
-				v++;
+				letters[21]++;
 				break;
 			case 'w':
-				w++;
+				letters[22]++;
 				break;
 			case 'x':
-				x++;
+				letters[23]++;
 				break;
 			case 'y':
-				y++;
+				letters[24]++;
 				break;
 			case 'z':
-				z++;
+				letters[25]++;
 				break;
 			}
 			total++;
@@ -135,32 +134,32 @@ void calculatePercentages(double percentages[], string word) {
 	}
 
 	// Calculate the percentage of each letter from the string
-	percentages[0] = (double)a / total * 100;
-	percentages[1] = (double)b / total * 100;
-	percentages[2] = (double)c / total * 100;
-	percentages[3] = (double)d / total * 100;
-	percentages[4] = (double)e / total * 100;
-	percentages[5] = (double)f / total * 100;
-	percentages[6] = (double)g / total * 100;
-	percentages[7] = (double)h / total * 100;
-	percentages[8] = (double)i / total * 100;
-	percentages[9] = (double)j / total * 100;
-	percentages[10] = (double)k / total * 100;
-	percentages[11] = (double)l / total * 100;
-	percentages[12] = (double)m / total * 100;
-	percentages[13] = (double)n / total * 100;
-	percentages[14] = (double)o / total * 100;
-	percentages[15] = (double)p / total * 100;
-	percentages[16] = (double)q / total * 100;
-	percentages[17] = (double)r / total * 100;
-	percentages[18] = (double)s / total * 100;
-	percentages[19] = (double)t / total * 100;
-	percentages[20] = (double)u / total * 100;
-	percentages[21] = (double)v / total * 100;
-	percentages[22] = (double)w / total * 100;
-	percentages[23] = (double)x / total * 100;
-	percentages[24] = (double)y / total * 100;
-	percentages[25] = (double)z / total * 100;
+	percentages[0] = (double)letters[0] / total * 100;
+	percentages[1] = (double)letters[1] / total * 100;
+	percentages[2] = (double)letters[2] / total * 100;
+	percentages[3] = (double)letters[3] / total * 100;
+	percentages[4] = (double)letters[4] / total * 100;
+	percentages[5] = (double)letters[5] / total * 100;
+	percentages[6] = (double)letters[6] / total * 100;
+	percentages[7] = (double)letters[7] / total * 100;
+	percentages[8] = (double)letters[8] / total * 100;
+	percentages[9] = (double)letters[9] / total * 100;
+	percentages[10] = (double)letters[10] / total * 100;
+	percentages[11] = (double)letters[11] / total * 100;
+	percentages[12] = (double)letters[12] / total * 100;
+	percentages[13] = (double)letters[13] / total * 100;
+	percentages[14] = (double)letters[14] / total * 100;
+	percentages[15] = (double)letters[15] / total * 100;
+	percentages[16] = (double)letters[16] / total * 100;
+	percentages[17] = (double)letters[17] / total * 100;
+	percentages[18] = (double)letters[18] / total * 100;
+	percentages[19] = (double)letters[19] / total * 100;
+	percentages[20] = (double)letters[20] / total * 100;
+	percentages[21] = (double)letters[21] / total * 100;
+	percentages[22] = (double)letters[22] / total * 100;
+	percentages[23] = (double)letters[23] / total * 100;
+	percentages[24] = (double)letters[24] / total * 100;
+	percentages[25] = (double)letters[25] / total * 100;
 }
 
 // Compare the difference of given letter percentages with presumed data
